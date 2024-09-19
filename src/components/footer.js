@@ -67,6 +67,14 @@ const StyledCredit = styled.div`
   }
 `;
 
+const NameWrapper = styled.div`
+  padding: 8px 0;
+`;
+
+const Heart = styled.span`
+  color: red;
+`;
+
 const Footer = () => {
   const [githubInfo, setGitHubInfo] = useState({
     stars: null,
@@ -106,7 +114,10 @@ const Footer = () => {
 
       <StyledCredit tabindex="-1">
         <a href="https://github.com/bchiang7/v4">
-          <div>Designed &amp; Built by Brittany Chiang</div>
+          <NameWrapper>Designed by Brittany Chiang</NameWrapper>
+          <NameWrapper>
+            Built with <Heart>❤</Heart> by Rajesh Gaur
+          </NameWrapper>
 
           {githubInfo.stars && githubInfo.forks && (
             <div className="github-stats">
